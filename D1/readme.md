@@ -14,7 +14,7 @@
 
 Для запуска сайта надо в настройках ```D1/DjangoStart/settings.py``` импортировать свой SECRET_KEY или раскоментировать дефолтный
 
-Запустить серевер командой ```python3 manage.py``` runserver
+Запустить серевер командой ```python3 manage.py runserver```
 
 Возможно понадобиться создать миграции командой ```python3 manage.py migrate```
 
