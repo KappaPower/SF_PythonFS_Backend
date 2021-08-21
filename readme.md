@@ -8,4 +8,4 @@
 
 1. Модуль D1. Знакомство с Django
 
-    [Ссылка на модуль](https://github.com/skripkalisa/SF_PythonFS_Backend)
+    [Ссылка на модуль](https://github.com/skripkalisa/SF_PythonFS_Backend/tree/Module_D1)
