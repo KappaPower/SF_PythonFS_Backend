@@ -7,3 +7,4 @@ __pycache__/
 # Database
 *.sqlite3
 1.html
+.vscode/
