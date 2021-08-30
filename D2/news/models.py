@@ -50,7 +50,7 @@ class Post(models.Model):
         self.save()
     
     def preview(self):
-        return f'{self.text[0:123]} ... {str(self.rating)}'
+        return f'{self.text[0:123]} ... rating: {str(self.rating)}'
 
 
 class PostCategory(models.Model):
