@@ -112,8 +112,9 @@ cd D2/ # if needed
 
 python3 manage.py shell
 
-
 from news.models import *
+
+# You need to run these commands if database was initialized
 
 user1 = User.objects.create(username='awesome', first_name='Writer')
 
@@ -148,8 +149,7 @@ p3.postCategory.add(c2)
 Comment.objects.create(commentUser=User.objects.get(username='awesome'), commentPost = Post.objects.get(pk=1), text='comment text1')
 
 Comment.objects.create(commentUser=User.objects.get(username='awesome'), commentPost = Post.objects.get(pk=2), text='comment text2')
-Comment.objects.create(commentUser=User.objects.get(username='average'), commentPost = Post.
-    ...: objects.get(pk=2), text='comment text2. Nice!')
+Comment.objects.create(commentUser=User.objects.get(username='average'), commentPost = Post.objects.get(pk=2), text='comment text2. Nice!')
 
 Comment.objects.create(commentUser=User.objects.get(username='average'), commentPost = Post.objects.get(pk=3), text='comment text3')
 
@@ -174,16 +174,13 @@ a1.authorRating
 a2 = Author.objects.get(authorUsername=User.objects.get(username='average'))
 a2.authorRating
 
+# Run these commands to test existing database
 
 bestAuthor = Author.objects.all().order_by('-authorRating').values('authorUsername__username','authorRating')[0]
 
 print(bestAuthor)
 
-bestArticleId = Post.objects.all().order_by('-rating').values('id')[0]
-
-# print(bestArticleId)
-
-bestArticle = Post.objects.get(id=bestArticleId.get('id'))
+bestArticle = Post.objects.all().order_by('-rating')[0]
 
 print(f'Date: {bestArticle.dateCreated.ctime()}, \
 \nAuthor: {bestArticle.author.authorUsername.username}, \
@@ -202,6 +199,5 @@ print(comments)
 *Скриншот консоли Джанго:*
 
 ![Скриншот консоли Джанго](./D2.png)
-
 
 :arrow_up: [к оглавлению](./readme.md#Оглавление)
