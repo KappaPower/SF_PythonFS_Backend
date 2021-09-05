@@ -5,8 +5,12 @@ __pycache__/
 *.bak
 
 # Database
-*.sqlite3
+D1/db.sqlite3
+D2/db.sqlite3
+
 1.html
 .vscode/
-
+.idea/
 .ipynb
+samples/
+*.txt
