@@ -13,4 +13,5 @@ D2/db.sqlite3
 .idea/
 .ipynb
 samples/
+!D3/static/txt/obscene.txt
 *.txt
