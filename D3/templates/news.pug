@@ -11,7 +11,7 @@
 h3.content-subhead The news 
   span {{ news|length }}
 //-  loop 
-| {% for n in news %}
+{% for n in news %}
 
 //-  A single blog post 
 section.post
@@ -20,13 +20,9 @@ section.post
     img.post-avatar(src="/{{  n.author.avatar }}" alt="avatar")
     a(href='./{{n.id}}')
       h2.post-title {{n.title|censor}}
-    p.post-meta
-      | By 
-      a.post-author(href='#') {{ n.author.authorUsername }} 
-      | on 
-      |  
-      i {{ n.dateCreated|date:'d M Y H:i' }} 
-      | Tags:  
+    p.post-meta By 
+      a.post-author(href='#') {{ n.author.authorUsername }} on 
+      i {{ n.dateCreated|date:'d M Y H:i' }} Tags:  
 
       a.post-category.post-category-design(href='#') {{n.get_categoryType_display }}  
       //- a.post-category.post-category-pure(href='#') Tag
@@ -36,4 +32,5 @@ section.post
       em Article rating: {{n.rating}} 
   
 hr
-| {%endfor%} {% endblock content %}
+{%endfor%} 
+{% endblock content %}

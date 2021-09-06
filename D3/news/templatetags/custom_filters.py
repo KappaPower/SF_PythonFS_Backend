@@ -20,7 +20,6 @@ def censor(value):
     stopwords = []
     text = value
     words = re.sub(r'[^\w\s]','',value).lower().split()
-    # words = re.compile(values, re.IGNORECASE).split(' ')
 
     with open('static/txt/obscene.txt', 'r') as f:
       stopwords = f.read().replace(',', '').split()

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView , DetailView  
-from .models import Post, Comment
+from .models import Post
 from django.views import View
 
 # Create your views here.
@@ -16,11 +16,6 @@ class PostView(DetailView):
   model = Post
   template_name = 'post.pug'
   context_object_name = 'post'
-
-# class CommentView(DetailView):
-#   model = Comment
-#   template_name = 'comment.pug'
-#   context_object_name = 'comment'
 
 class HomePageView(View):
   template_name = "index.pug"

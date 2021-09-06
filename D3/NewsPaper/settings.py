@@ -78,7 +78,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(BASE_DIR, 'templates').replace('\\','/'),],
-        # 'APP_DIRS': True,
+        # 'APP_DIRS': True, # disabled to make pypugjs work
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
