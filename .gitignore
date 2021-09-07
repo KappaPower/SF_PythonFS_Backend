@@ -13,5 +13,6 @@ D2/db.sqlite3
 .idea/
 .ipynb
 samples/
+heroku/
 !D3/static/txt/obscene.txt
 *.txt
