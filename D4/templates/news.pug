@@ -1,0 +1,36 @@
+//-   наследуемся от шаблона default.html, который мы создавали ещё во времена flatpages 
+{% extends 'flatpages/default.pug' %}
+
+{% load custom_filters %} 
+//-  Название у нас будет  
+{% block title %} The news {% endblock title %}
+
+//-  block 
+{% block content %}
+
+h3.content-subhead The news 
+  span {{ news|length }}
+//-  loop 
+{% for n in news %}
+
+//-  A single blog post 
+section.post
+  header.post-header
+
+    img.post-avatar(src="/{{  n.author.avatar }}" alt="avatar")
+    a(href='./{{n.id}}')
+      h2.post-title {{n.title|censor}}
+    p.post-meta By 
+      a.post-author(href='#') {{ n.author.authorUsername }} on 
+      i {{ n.dateCreated|date:'d M Y H:i' }} Tags:  
+
+      a.post-category.post-category-design(href='#') {{n.get_categoryType_display }}  
+      //- a.post-category.post-category-pure(href='#') Tag
+  .post-description
+    p {{ n.text|censor | truncatewords:25 }}
+    p
+      em Article rating: {{n.rating}} 
+  
+hr
+{%endfor%} 
+{% endblock content %}
