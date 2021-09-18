@@ -48,7 +48,7 @@ class PostSearch(ListView):
 
 # дженерик для создания объекта. Надо указать только имя шаблона и класс формы, который мы написали в прошлом юните. Остальное он сделает за вас
 class PostCreateView(CreateView):
-    template_name = 'post_create.html'
+    template_name = 'crud/post_create.html'
     form_class = PostForm
 
 # дженерик для редактирования объекта
