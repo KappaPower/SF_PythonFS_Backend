@@ -64,7 +64,7 @@ class PostSearch(ListView):
         return context
 
 # дженерик для создания объекта. Надо указать только имя шаблона и класс формы, который мы написали в прошлом юните. Остальное он сделает за вас
-# @method_decorator(login_required, name='dispatch')
+
 class PostCreateView(PermissionRequiredMixin, CreateView):
     template_name = 'news/crud/post_create.html'
     form_class = PostForm
@@ -79,8 +79,6 @@ class PostCreateView(PermissionRequiredMixin, CreateView):
 
 
 # дженерик для редактирования объекта
-# @method_decorator(login_required, name='dispatch')
-# @method_decorator(login_required(login_url = 'sign/login/'), name='dispatch')
 class PostUpdateView(PermissionRequiredMixin, UpdateView):
     template_name = 'news/crud/post_create.html'
     form_class = PostForm
@@ -95,13 +93,9 @@ class PostUpdateView(PermissionRequiredMixin, UpdateView):
 
 
 # дженерик для удаления товара
-# @method_decorator(login_required, name='dispatch')
 class PostDeleteView(PermissionRequiredMixin, DeleteView ):
-
     template_name = 'news/crud/post_delete.html'
-    # queryset = Post.objects.get(pk=id)
     success_url = '/news/'
-
     permission_required = ('news.delete_post')
 
     def get_object(self, **kwargs):

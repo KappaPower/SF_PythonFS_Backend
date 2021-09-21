@@ -14,10 +14,5 @@ urlpatterns = [
 
     path('<int:pk>/edit', PostUpdateView.as_view(), name='post_edit'),
     path('<int:pk>/delete', PostDeleteView.as_view(), name='post_delete'),
-    # path('login/', ProtectedView.as_view(), name='login'),
 
-
-    url(r'^user_list$', user_list),
-    path('product_list', product_list),
-    path('comment_list', comment_list),
 ]

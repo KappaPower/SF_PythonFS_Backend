@@ -18,12 +18,9 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    # path('', TemplateView.as_view(template_name='news/index.html')), 
     path('sign/', include('sign.urls')),
     path('', include('protect.urls')),
     path('admin/', admin.site.urls),
-    # path('login/', TemplateView.as_view(template_name='news/index.html')),
     path('news/', include('news.urls')),  # делаем так, чтобы все адреса из нашего приложения (simpleapp/urls.py) сами автоматически подключались когда мы их добавим.
-    # path('post/', include('news.urls')),  # делаем так, чтобы все адреса из нашего приложения (simpleapp/urls.py) сами автоматически подключались когда мы их добавим.
     path('accounts/', include('allauth.urls')),
 ]

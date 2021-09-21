@@ -54,10 +54,6 @@ INSTALLED_APPS = [
     'django_filters',
     'sign',
     'protect',
-    # The following apps are required:
-    # 'django.contrib.auth',
-    # 'django.contrib.messages',
-    # 'django.contrib.sites',
 
     'allauth',
     'allauth.account',
@@ -134,7 +130,6 @@ WSGI_APPLICATION = 'NewsPaper.wsgi.application'
 
 # Обратите внимание, что мы изменили параметр LOGIN_URL.
 LOGIN_URL = '/accounts/login/'
-# LOGIN_URL = '/sign/login/'
 
 # В файл настроек проекта мы должны внести дополнительные параметры:
 ACCOUNT_EMAIL_REQUIRED = True
