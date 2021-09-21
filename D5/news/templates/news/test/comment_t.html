@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %}
+Comment T
+{% endblock title %}
+
+{% block content %}
+<form method="get">
+
+  {{filter.form.as_p}}
+  <input type="submit" value="Filter" />
+</form>
+
+{% for obj in filter.qs %}
+<h4>
+  {{obj.date}} : {{ obj.time}}
+
+</h4>
+<p>
+
+  {{obj.text}}
+</p>
+<hr>
+
+{% endfor %}
+{% endblock content %}
