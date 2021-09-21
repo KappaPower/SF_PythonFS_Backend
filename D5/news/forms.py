@@ -25,7 +25,7 @@ class PostForm(ModelForm):
                     "title": "Title",
                     "text": "Text",
                 }
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)  
-        context["post_author"] = self.kwargs.get("username")
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)  
+    #     context["post_author"] = self.kwargs.get("username")
+    #     return context

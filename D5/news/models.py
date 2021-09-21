@@ -32,7 +32,9 @@ class Category(models.Model):
         return f'{self.name}'
 
 class Post(models.Model):
+    # authorUsername = models.OneToOneField(User, on_delete=models.CASCADE)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    # author = models.ForeignKey(Author, on_delete=models.CASCADE)
     NEWS = 'NWS'
     ARTICLE = 'ART'
     REVIEW = 'RVW'
