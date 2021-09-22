@@ -74,6 +74,7 @@ class PostCreateView(PermissionRequiredMixin, CreateView):
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.author = Author.objects.get(authorUsername=self.request.user)
+        # print(self.request.user)
         self.object.save()
         return super().form_valid(form)
 
@@ -101,28 +102,4 @@ class PostDeleteView(PermissionRequiredMixin, DeleteView ):
     def get_object(self, **kwargs):
         id = self.kwargs.get('pk')
         return Post.objects.get(pk=id)
-
-
-def user_list(request):
-    f = F(request.GET, queryset=User.objects.all())
-    return render(request, 'user_t.html', {'filter': f})
-
-
-def product_list(request):
-    c = C(request.GET, queryset=Post.objects.all())
-    return render(request, 'product_t.html', {'filter': c})
-
-
-def comment_list(request):
-    d = D(request.GET, queryset=Comment.objects.all())
-    return render(request, 'comment_t.html', {'filter': d})
-
-# authentication using decorator
-@method_decorator(login_required(login_url = '/login/'), name='dispatch')
-class ProtectedView(TemplateView):
-    template_name = 'prodected_page.html'
-
-#authentication using mixin
-class ProtectedView2(LoginRequiredMixin, TemplateView):
-    template_name = 'prodected_page2.html'
 

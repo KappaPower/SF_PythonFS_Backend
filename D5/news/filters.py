@@ -14,7 +14,7 @@ class PostFilter(FilterSet):
 
     class Meta:
         model = Post
-        fields = ['author__authorUsername',  'categoryType']
+        fields = ['author',  'categoryType']
 
 
 class F(FilterSet):

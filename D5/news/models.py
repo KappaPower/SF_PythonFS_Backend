@@ -32,9 +32,7 @@ class Category(models.Model):
         return f'{self.name}'
 
 class Post(models.Model):
-    # authorUsername = models.OneToOneField(User, on_delete=models.CASCADE)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    # author = models.ForeignKey(Author, on_delete=models.CASCADE)
     NEWS = 'NWS'
     ARTICLE = 'ART'
     REVIEW = 'RVW'
@@ -81,7 +79,7 @@ class Comment(models.Model):
 
     def __str__(self):
         try:
-            return self.commentPost.author.authorUsername.username
+            return self.commentPost.author.username
         except:
             return self.commentUser.username
 

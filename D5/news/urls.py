@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf.urls import url
-from .views import NewsList, PostView, PostSearch, PostCreateView, PostDeleteView, PostUpdateView, user_list, product_list, comment_list, ProtectedView
+from .views import NewsList, PostView, PostSearch, PostCreateView, PostDeleteView, PostUpdateView
 
 urlpatterns = [
     # path — означает путь. В данном случае путь ко всем товарам у нас останется пустым, позже станет ясно, почему
