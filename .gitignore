@@ -16,3 +16,4 @@ samples/
 heroku/
 !D3/static/txt/obscene.txt
 *.txt
+*.zip
