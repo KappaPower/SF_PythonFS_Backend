@@ -5,12 +5,7 @@ __pycache__/
 *.bak
 
 # Database
-D1/db.sqlite3
-D2/db.sqlite3
-D3/db.sqlite3
-D4/db.sqlite3
-D5/db.sqlite3
-D6/db.sqlite3
+db.sqlite3
 
 1.html
 .vscode/
