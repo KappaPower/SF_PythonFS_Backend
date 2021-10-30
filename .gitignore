@@ -6,7 +6,7 @@ __pycache__/
 
 # Database
 D1/db.sqlite3
-*.sqlite3
+D*/*.sqlite3
 
 1.html
 .vscode/
