@@ -2,23 +2,11 @@ from django.core.mail.message import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from .models import Post
 from datetime import  timedelta, date
-# from django.utils.timezone import datetime, timedelta, timezone, timestamp
 
 #  файле tasks.py импортируем декоратор из библиотеки:
 from celery import shared_task
 
-# import time
 
-# @shared_task
-# def hello():
-#     time.sleep(10)
-#     print("Hello, world!")
-
-# @shared_task
-# def printer(N):
-#     for i in range(N):
-#         time.sleep(1)
-#         print(i+1)
 
 def get_subscribers(category):
     user_emails = []
@@ -87,14 +75,8 @@ def notify_subscribers_weekly():
 
     user_emails = set()
     for category in past_week_categories:
-        # # print(category.subscribers.all())
-        # email_subject = f'New post in category: "{category}"'
         get_user_emails = (set(get_subscribers(category)))
         user_emails.update(get_user_emails)
-        # print(get_user_emails)
-
-    # print(post.postCategory.all().filter(postCategory=category))
-    # print(user_emails)
 
     for user_email in user_emails:
       post_object = []

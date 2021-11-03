@@ -15,8 +15,6 @@ from .filters import C, PostFilter
 from .forms import PostForm  # импортируем нашу форму
 from .models import Post, Author, Category, CatSub
 from django.http import HttpResponse
-# from .tasks import hello, printer
-
 
 
 class NewsList(ListView):
@@ -40,11 +38,6 @@ class NewsList(ListView):
         context['form'] = PostForm
         return context
 
-    # def get(self, request):
-    #     printer.apply_async([10], 
-    #                         eta = datetime.now() + timedelta(seconds=5))
-    #     hello.delay()
-    #     return HttpResponse('Hello!')
 
 class PostView(DetailView):
     model = Post
@@ -105,7 +98,6 @@ class PostType(ListView):
     paginate_by = 10
 
     def get_queryset(self):
-        # self.categoryType = self.get_categoryType_display
         self.name = resolve(self.request.path_info).kwargs['name']
         queryset = Post.objects.filter(categoryType=self.name)
         return queryset
@@ -115,7 +107,6 @@ class PostType(ListView):
         context = super().get_context_data(**kwargs)
         context['filter'] = PostFilter(
             self.request.GET, queryset=self.get_queryset())
-        # context['data'] = page_name(self.request)
         context['name'] = self.name
 
         return context
