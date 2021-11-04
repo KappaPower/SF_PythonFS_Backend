@@ -10,6 +10,30 @@
 4. Реализовать рассылку уведомлений подписчикам после создания новости.
 5. Реализовать еженедельную рассылку с последними новостями (каждый понедельник в 8:00 утра).
 
+## Решение
+
+Для проверки запустить в терминале команду:
+
+    python3 manage.py runserver
+
+Создать ещё один сеанс в терминале и запустить команду:
+
+    celery -A NewsPaper worker -l INFO -B
+
+В файле celery.py заменить
+
+```py
+# 'schedule': crontab(), # Uncomment to test this feature
+'schedule': crontab(hour=8, minute=0, day_of_week='monday'),
+```
+
+на
+
+```py
+'schedule': crontab(), # Uncomment to test this feature
+# 'schedule': crontab(hour=8, minute=0, day_of_week='monday'),
+```
+
 ## Скриншоты
 
 ![Скриншот](./D7_1.png)

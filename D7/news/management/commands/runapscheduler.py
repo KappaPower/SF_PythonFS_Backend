@@ -8,17 +8,21 @@ from apscheduler.triggers.cron import CronTrigger
 from django.core.management.base import BaseCommand
 from django_apscheduler.jobstores import DjangoJobStore
 from django_apscheduler.models import DjangoJobExecution
+import celery
 
 from news.tasks import notify_subscribers_weekly
+
+
 
 logger = logging.getLogger(__name__)
 
 
 # наша задача по выводу текста на экран
 def my_job():
-    notify_subscribers_weekly()
-    #  Your job processing logic here... 
     # print('hello from job')
+    notify_subscribers_weekly()
+    # celery.Celery()
+    #  Your job processing logic here... 
 
 
 # функция, которая будет удалять неактуальные задачи
