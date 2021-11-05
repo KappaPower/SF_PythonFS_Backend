@@ -16,3 +16,5 @@ heroku/
 !D3/static/txt/obscene.txt
 *.txt
 *.zip
+*.env
+flag.py
