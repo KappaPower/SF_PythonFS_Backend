@@ -19,3 +19,4 @@ heroku/
 *.env
 flag.py
 11.tmp
+*.djcache
