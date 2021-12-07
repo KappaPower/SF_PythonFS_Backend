@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-22 00:35+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: news/models.py:10
+msgid "username"
+msgstr "логин"
+
+#: news/models.py:12 news/models.py:84 news/models.py:137
+msgid "rating"
+msgstr "рейтинг"
+
+#: news/models.py:13
+msgid "avatar"
+msgstr "аватар"
+
+#: news/models.py:35
+msgid "author"
+msgstr "автор"
+
+#: news/models.py:36
+msgid "authors"
+msgstr "автор"
+
+#: news/models.py:43 news/models.py:61 news/models.py:87 news/models.py:159
+msgid "category"
+msgstr "категория"
+
+#: news/models.py:47
+msgctxt "help text for Category subscribers"
+msgid "subscribers"
+msgstr "читатели"
+
+#: news/models.py:62
+msgid "categories"
+msgstr "категории"
+
+#: news/models.py:67
+msgctxt "help text for Post author"
+msgid "author"
+msgstr "автор"
+
+#: news/models.py:74
+msgid "News"
+msgstr "Новость"
+
+#: news/models.py:75
+msgid "Article"
+msgstr "Статья"
+
+#: news/models.py:76
+msgid "Review"
+msgstr "Обзор"
+
+#: news/models.py:78
+msgid "type"
+msgstr "тип"
+
+#: news/models.py:81 news/models.py:136
+msgid "date"
+msgstr "дата"
+
+#: news/models.py:82 news/models.py:135
+msgid "text"
+msgstr "текст"
+
+#: news/models.py:83
+msgid "title"
+msgstr "заголовок"
+
+#: news/models.py:85
+msgid "edited"
+msgstr "изменён"
+
+#: news/models.py:118
+msgid "post"
+msgstr "пост"
+
+#: news/models.py:119
+msgid "posts"
+msgstr "посты"
+
+#: news/models.py:122 news/models.py:133
+msgid "corr_post"
+msgstr "корр_пост"
+
+#: news/models.py:123
+msgid "corr_category"
+msgstr "корр_категория"
+
+#: news/models.py:129
+msgid "post category"
+msgstr "категория поста"
+
+#: news/models.py:130
+msgid "post categories"
+msgstr "категории постов"
+
+#: news/models.py:134
+msgid "login"
+msgstr "логин"
+
+#: news/models.py:154
+msgid "comment"
+msgstr "комментарий"
+
+#: news/models.py:155
+msgid "comments"
+msgstr "комментарии"
+
+#: news/models.py:160
+msgid "subscriber"
+msgstr "читатель"
+
+#: news/models.py:174
+msgid "subscription"
+msgstr "подписка"
+
+#: news/models.py:175
+msgid "subscriptions"
+msgstr "подписки"
+
+#: news/templates/news/layout.html:54
+msgid "Home"
+msgstr "Домой"
+
+#: news/templates/news/layout.html:58
+msgid "Read"
+msgstr "Читать"
+
+#: news/templates/news/layout.html:61
+msgid "Search"
+msgstr "Искать"
+
+#: news/templates/news/layout.html:64
+msgid "Write"
+msgstr "Написать"
+
+#: news/templates/news/layout.html:68
+msgid "Admin"
+msgstr "Админка"
+
+#: news/templates/news/news.html:7 news/templates/news/news.html:12
+msgid "The news"
+msgstr "Новости"
+
+#: news/templates/news/news.html:29
+msgid "First"
+msgstr "перв"
+
+#: news/templates/news/news.html:59
+msgid "Last"
+msgstr "посл"
+
+#: news/templates/news/news.html:78
+msgid "By"
+msgstr "автор"
+
+#: news/templates/news/news.html:82
+msgid "on"
+msgstr "дата"
+
+#: news/templates/news/news.html:84
+msgid "Type"
+msgstr "Тип"
+
+#: news/templates/news/news.html:91
+msgid "Tags"
+msgstr "Тэги"
+
+#: news/templates/news/news.html:103
+msgid "Article rating"
+msgstr "Рейтинг статьи"
