@@ -20,3 +20,5 @@ heroku/
 flag.py
 11.tmp
 *.djcache
+admin/
+ckeditor/

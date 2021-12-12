@@ -70,6 +70,8 @@ INSTALLED_APPS = [
     'accounts',
 ]
 
+TRANSLATABLE_MODEL_MODULES =["news.models",]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -112,9 +114,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
-from pypugjs.ext.django.compiler import enable_pug_translations
+# from pypugjs.ext.django.compiler import enable_pug_translations
 
-enable_pug_translations()
+# enable_pug_translations()
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
